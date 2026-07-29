@@ -23,30 +23,54 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "TaxiService",
-    "name": "DIGIY DRIVER — Chauffeur à Saly",
-    "description": "Service chauffeur avec contact direct, inscription chauffeur et galerie chauffeurs pour Saly, AIBD, Dakar, Mbour, Ngaparou, Somone et Petite Côte.",
-    "url": "https://chauffeur-saly.digiylyfe.com/",
-    "areaServed": ["Saly", "AIBD", "Dakar", "Mbour", "Petite Côte", "Ngaparou", "Somone"],
-    "provider": {
-      "@type": "Organization",
-      "name": "DIGIYLYFE",
-      "url": "https://digiylyfe.com/"
-    },
-    "potentialAction": [
+    "@graph": [
       {
-        "@type": "ReserveAction",
-        "target": "https://digiy-driver-part-bapt.digiylyfe.com/"
+        "@type": "WebPage",
+        "@id": "https://chauffeur-saly.digiylyfe.com/#webpage",
+        "url": "https://chauffeur-saly.digiylyfe.com/",
+        "name": "Chauffeur à Saly, AIBD et Mbour — DIGIY DRIVER",
+        "description": "Porte locale DIGIY DRIVER pour trouver un chauffeur privé ou un chauffeur partenaire sur réservation à Saly, AIBD, Mbour, Dakar et sur la Petite Côte.",
+        "inLanguage": "fr-SN",
+        "isPartOf": {"@id": "https://digiylyfe.com/#organization"},
+        "mainEntity": {"@id": "https://chauffeur-saly.digiylyfe.com/#service"}
       },
       {
-        "@type": "RegisterAction",
-        "name": "Inscription chauffeur DIGIY DRIVER",
-        "target": "https://chauffeur-saly.digiylyfe.com/inscription.html"
+        "@type": "Organization",
+        "@id": "https://digiylyfe.com/#organization",
+        "name": "DIGIYLYFE",
+        "url": "https://digiylyfe.com/"
       },
       {
-        "@type": "ViewAction",
-        "name": "Galerie chauffeurs DIGIY DRIVER",
-        "target": "https://galerie-chauffeurs.digiylyfe.com/"
+        "@type": "Service",
+        "@id": "https://chauffeur-saly.digiylyfe.com/#service",
+        "name": "DIGIY DRIVER — Chauffeurs privés et transferts sur réservation",
+        "serviceType": "Mise en relation directe avec des chauffeurs partenaires sur réservation",
+        "description": "Fiches chauffeur, transferts AIBD, trajets locaux et contact direct pour Saly, Mbour, Dakar, Ngaparou, Somone et la Petite Côte.",
+        "url": "https://chauffeur-saly.digiylyfe.com/",
+        "provider": {"@id": "https://digiylyfe.com/#organization"},
+        "areaServed": ["Saly", "AIBD", "Dakar", "Mbour", "Petite Côte", "Ngaparou", "Somone"],
+        "availableChannel": {
+          "@type": "ServiceChannel",
+          "serviceUrl": "https://galerie-chauffeurs.digiylyfe.com/",
+          "availableLanguage": ["fr", "wo"]
+        },
+        "potentialAction": [
+          {
+            "@type": "ViewAction",
+            "name": "Voir Lamine, chauffeur privé à Saly",
+            "target": "https://partenaire-lamine.digiylyfe.com/"
+          },
+          {
+            "@type": "RegisterAction",
+            "name": "Inscription chauffeur DIGIY DRIVER",
+            "target": "https://chauffeur-saly.digiylyfe.com/inscription.html"
+          },
+          {
+            "@type": "ViewAction",
+            "name": "Galerie chauffeurs DIGIY DRIVER",
+            "target": "https://galerie-chauffeurs.digiylyfe.com/"
+          }
+        ]
       }
     ]
   }
@@ -126,7 +150,7 @@
 
       <p class="lead">
         Besoin d’un chauffeur à Saly pour un transfert AIBD, un trajet vers Dakar, Mbour, Ngaparou, Somone
-        ou une course sur la Petite Côte ? DIGIY DRIVER ouvre une route directe vers une fiche chauffeur locale.
+        ou une course sur la Petite Côte ? DIGIY DRIVER ouvre une route directe vers une fiche de chauffeur partenaire, joignable sur réservation.
       </p>
 
       <div class="seal">
@@ -138,8 +162,13 @@
         </span>
       </div>
 
+      <p class="note" style="margin-top:16px;color:#fff3cf">
+        Chauffeur partenaire actuellement mis en avant :
+        <a href="https://partenaire-lamine.digiylyfe.com/" style="text-decoration:underline">Lamine, chauffeur privé à Saly</a> — transferts AIBD, trajets locaux et Petite Côte, selon disponibilité et sur réservation.
+      </p>
+
       <div class="ctaRow">
-        <a class="btn gold" href="https://digiy-driver-part-bapt.digiylyfe.com/" rel="noopener">🚗 Ouvrir la fiche Ambassadeur Chauffeur</a>
+        <a class="btn gold" href="https://partenaire-lamine.digiylyfe.com/" rel="noopener">🚗 Voir Lamine · Chauffeur privé à Saly</a>
         <a class="btn green" href="https://chauffeur-saly.digiylyfe.com/inscription.html" rel="noopener">📝 Inscription chauffeur DIGIY DRIVER</a>
         <a class="btn" href="https://galerie-chauffeurs.digiylyfe.com/" rel="noopener">👑 Galerie chauffeurs</a>
         <a class="btn" href="https://digiylyfe.com/">🌍 Retour DIGIYLYFE</a>
@@ -192,7 +221,7 @@
       <h2>Une porte locale, pas une plateforme à commission</h2>
       <p>
         Cette page aide Google et les clients à comprendre une chose simple : lorsqu’une personne cherche un
-        chauffeur à Saly, un taxi pour AIBD, un trajet Saly Dakar ou un déplacement vers Mbour et la Petite Côte,
+        chauffeur à Saly, un transfert vers AIBD, un trajet Saly–Dakar ou un déplacement vers Mbour et la Petite Côte,
         DIGIY DRIVER peut ouvrir une fiche locale claire, partageable et joignable directement.
       </p>
     </section>
@@ -221,8 +250,9 @@
 
     <footer>
       DIGIYLYFE ∞ 0% commission · 0% dépendance · le professionnel garde la main.<br>
-      <a href="https://digiylyfe.com/">Maison mère DIGIYLYFE</a> · <a href="https://digiy-driver-part-bapt.digiylyfe.com/">Fiche Ambassadeur Chauffeur</a> · <a href="https://chauffeur-saly.digiylyfe.com/inscription.html">Inscription chauffeur</a> · <a href="https://galerie-chauffeurs.digiylyfe.com/">Galerie chauffeurs</a>
+      <a href="https://digiylyfe.com/">Maison mère DIGIYLYFE</a> · <a href="https://partenaire-lamine.digiylyfe.com/">Fiche de Lamine · Chauffeur privé</a> · <a href="https://chauffeur-saly.digiylyfe.com/inscription.html">Inscription chauffeur</a> · <a href="https://galerie-chauffeurs.digiylyfe.com/">Galerie chauffeurs</a>
     </footer>
   </main>
 </body>
 </html>
+
