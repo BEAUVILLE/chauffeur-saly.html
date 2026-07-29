@@ -58,7 +58,12 @@
           {
             "@type": "ViewAction",
             "name": "Voir Lamine, chauffeur privé à Saly",
-            "target": "https://partenaire-lamine.digiylyfe.com/"
+            "target": "https://partenaire-lamine.digiylyfe.com/?source=chauffeur-saly"
+          },
+          {
+            "@type": "ViewAction",
+            "name": "Voir Baptiste, chauffeur ambassadeur DIGIY DRIVER",
+            "target": "https://digiy-driver-part-bapt.digiylyfe.com/?source=chauffeur-saly"
           },
           {
             "@type": "RegisterAction",
@@ -126,11 +131,16 @@
     .card{border:1px solid var(--line);background:var(--card);border-radius:22px;min-height:104px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px}
     .card i{font-style:normal;font-size:28px}.card strong{font-size:14px;font-weight:1000}.card small{margin-top:3px;color:var(--soft);font-size:11px;font-weight:850}
     .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+    .driver-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
+    .driver-card{border:1px solid rgba(246,196,83,.34);border-radius:24px;background:linear-gradient(145deg,rgba(246,196,83,.10),rgba(255,255,255,.055));padding:16px;text-align:left;display:grid;gap:10px}
+    .driver-card h3{margin:0;color:#fff3cf;font-size:22px;line-height:1.05}
+    .driver-card p{margin:0;color:var(--soft);font-size:13px;line-height:1.5;font-weight:850}
+    .driver-card .btn{width:100%;min-height:50px}
     .step{border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.06);padding:14px;text-align:center}.step b{display:block;color:#fff3cf}.step span{display:block;margin-top:5px;color:var(--soft);font-size:13px;font-weight:850;line-height:1.35}
     .note{margin:14px auto 0;color:rgba(255,250,240,.70);font-size:12px;line-height:1.45;font-weight:850;text-align:center;max-width:700px}
     footer{margin-top:16px;color:rgba(255,250,240,.66);text-align:center;font-size:12px;font-weight:850;line-height:1.45}
     footer a{color:#fff3cf;font-weight:1000}
-    @media(max-width:680px){.grid,.steps{grid-template-columns:1fr}.btn{width:100%}.hero{border-radius:30px}.section{text-align:center}}
+    @media(max-width:680px){.grid,.steps,.driver-grid{grid-template-columns:1fr}.btn{width:100%}.hero{border-radius:30px}.section{text-align:center}.driver-card{text-align:center}}
   </style>
 </head>
 
@@ -162,17 +172,31 @@
         </span>
       </div>
 
+      <div class="driver-grid" aria-label="Chauffeurs partenaires DIGIY DRIVER">
+        <article class="driver-card">
+          <span class="badge">Saly · AIBD · Petite Côte</span>
+          <h3>Lamine</h3>
+          <p>Chauffeur privé à Saly. Transferts AIBD, trajets locaux, Dakar et Petite Côte, selon disponibilité et sur réservation.</p>
+          <a class="btn gold" href="https://partenaire-lamine.digiylyfe.com/?source=chauffeur-saly" rel="noopener">🚗 Ouvrir la fiche de Lamine</a>
+        </article>
+
+        <article class="driver-card">
+          <span class="badge">Ambassadeur DIGIY DRIVER</span>
+          <h3>Baptiste</h3>
+          <p>Chauffeur ambassadeur présenté dans l’écosystème DIGIY DRIVER. Consultez sa fiche pour découvrir sa zone, ses services et son contact direct.</p>
+          <a class="btn gold" href="https://digiy-driver-part-bapt.digiylyfe.com/?source=chauffeur-saly" rel="noopener">🚗 Ouvrir la fiche de Baptiste</a>
+        </article>
+      </div>
+
       <p class="note" style="margin-top:16px;color:#fff3cf">
-        Chauffeur partenaire actuellement mis en avant :
-        <a href="https://partenaire-lamine.digiylyfe.com/" style="text-decoration:underline">Lamine, chauffeur privé à Saly</a> — transferts AIBD, trajets locaux et Petite Côte, selon disponibilité et sur réservation.
+        Deux profils, deux fiches directes : le terrain montre naturellement lequel répond le mieux aux besoins des visiteurs.
       </p>
 
       <div class="ctaRow">
-        <a class="btn gold" href="https://partenaire-lamine.digiylyfe.com/" rel="noopener">🚗 Voir Lamine · Chauffeur privé à Saly</a>
         <a class="btn green" href="https://chauffeur-saly.digiylyfe.com/inscription.html" rel="noopener">📝 Inscription chauffeur DIGIY DRIVER</a>
         <a class="btn" href="https://galerie-chauffeurs.digiylyfe.com/" rel="noopener">👑 Galerie chauffeurs</a>
         <a class="btn" href="https://digiylyfe.com/">🌍 Retour DIGIYLYFE</a>
-        <a class="btn" href="https://wa.me/?text=Chauffeur%20%C3%A0%20Saly%20%2F%20AIBD%20avec%20DIGIY%20DRIVER%20%3A%20https%3A%2F%2Fchauffeur-saly.digiylyfe.com%2F" target="_blank" rel="noopener">💬 Partager WhatsApp</a>
+        <a class="btn" href="https://wa.me/?text=Chauffeurs%20%C3%A0%20Saly%20%2F%20AIBD%20avec%20DIGIY%20DRIVER%20%3A%20https%3A%2F%2Fchauffeur-saly.digiylyfe.com%2F" target="_blank" rel="noopener">💬 Partager WhatsApp</a>
       </div>
 
       <div class="grid" aria-label="Zones chauffeur">
@@ -250,9 +274,10 @@
 
     <footer>
       DIGIYLYFE ∞ 0% commission · 0% dépendance · le professionnel garde la main.<br>
-      <a href="https://digiylyfe.com/">Maison mère DIGIYLYFE</a> · <a href="https://partenaire-lamine.digiylyfe.com/">Fiche de Lamine · Chauffeur privé</a> · <a href="https://chauffeur-saly.digiylyfe.com/inscription.html">Inscription chauffeur</a> · <a href="https://galerie-chauffeurs.digiylyfe.com/">Galerie chauffeurs</a>
+      <a href="https://digiylyfe.com/">Maison mère DIGIYLYFE</a> · <a href="https://partenaire-lamine.digiylyfe.com/?source=chauffeur-saly">Lamine</a> · <a href="https://digiy-driver-part-bapt.digiylyfe.com/?source=chauffeur-saly">Baptiste</a> · <a href="https://chauffeur-saly.digiylyfe.com/inscription.html">Inscription chauffeur</a> · <a href="https://galerie-chauffeurs.digiylyfe.com/">Galerie chauffeurs</a>
     </footer>
   </main>
 </body>
 </html>
+
 
